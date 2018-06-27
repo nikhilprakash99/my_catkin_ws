@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<launch>
+	<node
+		name="Input"
+		pkg="turtlesim"
+		type="turtle_teleop_key"
+		launch-prefix="xterm -e" >
+		<remap from="/turtle1/cmd_vel" to="/command"	/>
+	</node>
+	
+	<node
+		name="gesture_control_client"
+		pkg="quad_gesture_control"
+		type="gesture_control_client"
+		output="screen"
+	/>
+
+	<node
+		name="takeoff_server"
+		pkg="quad_gesture_control"
+		type="takeoff_server"
+		output="screen"
+	/>
+</launch>

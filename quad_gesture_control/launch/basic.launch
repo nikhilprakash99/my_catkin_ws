@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<launch>
+
+	<node 
+		name="display" 
+		pkg = "quad_gesture_control" 
+		type = "display" 
+		output="screen"
+	/>
+
+	<param name = "mode" value="program is WOrking" />
+
+</launch>
